@@ -49,8 +49,7 @@ private fun fetchData()
 
 
     val url3 = "https://meme-api.com/gimme"
- val url = "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=6cdbed29016049d99ce1eb29754afb40"
-val url2="https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=6cdbed29016049d99ce1eb29754afb40"
+ 
 val jsonObjectRequestObject=JsonObjectRequest(Request.Method.GET,
     url3,
     null,
