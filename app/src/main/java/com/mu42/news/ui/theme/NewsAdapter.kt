@@ -1,5 +1,6 @@
 package com.mu42.news.ui.theme
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,10 +11,10 @@ import com.bumptech.glide.Glide
 import com.mu42.news.R
 import com.mu42.news.ui.NewsArticle
 
-class NewsAdapter(private val articles: List<NewsArticle>) :
+class NewsAdapter(val context: Context, private val articles: ArrayList<NewsArticle>) :
     RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
 
-    class NewsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+     inner class NewsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val ivArticleImage: ImageView = itemView.findViewById(R.id.ivArticleImage)
         val tvTitle: TextView = itemView.findViewById(R.id.tvTitle)
         val tvAuthor: TextView = itemView.findViewById(R.id.tvAuthor)
